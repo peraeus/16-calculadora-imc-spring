@@ -7,18 +7,18 @@
 </head>
 <body>
     <h1>Calculadora IMC</h1>
-    <form method="post" th:action="@{/calcular}">
+    <form method="post" th:action="@{/calcular}" onsubmit="return validar()">
         <div>
             <label>Nome</label>
             <input type="text" name="nome">
         </div>
         <div>
             <label>Altura (metros)</label>
-            <input type="text" name="altura" placeholder="ex: 1,85">
+            <input type="text" name="altura" placeholder="ex: 1,85" id="altura">
         </div>
         <div>
             <label>Peso (kgs)</label>
-            <input type="text" name="peso" placeholder="ex: 85,50">
+            <input type="text" name="peso" placeholder="ex: 85,50" id="peso">
         </div>
         <button type="submit">Calcular IMC</button>
     </form>
@@ -27,7 +27,9 @@
         <p></p>
     </section>
     <section>
-        <h2><p></p></h2>
+        <h2><p id="erro"></p></h2>
     </section>
+    <script th:src="@{/js/script.js}"></script>
 </body>
+
 </html>
