@@ -22,9 +22,9 @@
         </div>
         <button type="submit">Calcular IMC</button>
     </form>
-    <section>
+    <section th:if = "${imc != null}">
         <h2>IMC</h2>
-        <p></p>
+        <p th:text="${imc}"></p>
     </section>
     <section>
         <h2><p id="erro"></p></h2>
